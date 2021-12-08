@@ -4,8 +4,8 @@ def substrings(str, dictionary)
   str_array = str.downcase.split
 
   result = dictionary.map do |word|
-    str_array.each_with_object(Hash.new(0)) do |v, a|
-      a[word] += 1 if v.match?(word)
+    str_array.each_with_object(Hash.new(0)) do |value, obj|
+      obj[word] += 1 if value.match?(word)
     end
   end
 
