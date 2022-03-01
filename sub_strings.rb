@@ -10,7 +10,7 @@ def substrings(str, dictionary)
   end
 
   result.delete_if(&:empty?)
-  p result
+  result.reduce({}, :merge)
 end
 
-substrings("Howdy partner, sit down! How's it going?", dictionary)
+p substrings("Howdy partner, sit down! How's it going?", dictionary)
